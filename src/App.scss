@@ -1,34 +1,40 @@
-*, ::before, ::after {
+*, ::before, ::after{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
+  
 }
 
-.header__section {
+// //Test wether the Scss is working.
+// h1{
+//   color: aqua;
+// }
+
+.header__section{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem;
+  padding:2rem;
 }
 
-.play__logo {
-  display: flex;
-  justify-content: center;
+.play__logo{
+   display: flex;
+   justify-content: center;
 }
 
-.search__bar {
-  display: flex;
+.search__bar{
+  display:flex;
   border: 0.25rem solid #e1e1e1;
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.upload__logo {
+.upload__logo{
   padding-right: 0.5rem;
 }
 
-.uploadBtn {
+.uploadBtn{
   width: 50%;
   display: flex;
   justify-content: center;
@@ -40,15 +46,15 @@
   margin-top: 0.5rem;
 }
 
-.user__img--mohan {
-  width: 3rem;
+.user__img--mohan{
+  width:3rem;
   height: 3rem;
   border-radius: 50%;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.uploadBtn--user {
+.uploadBtn--user{
   padding-top: 0.5rem;
   display: flex;
-}/*# sourceMappingURL=App.css.map */
+ }
