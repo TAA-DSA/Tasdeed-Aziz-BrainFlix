@@ -14,10 +14,11 @@ function Header (){
              <div className='search__bar'>
              <div>
                  <img className = "search__logo" src={searchIcon} alt="magnifyingGlass" />
+                 {/* <input className ='search__box' type = 'name' placeholder='search'></input> */}
              </div>
 
              <div>
-                 <p>Search</p>
+                 <p className='search__header'>Search</p>
              </div>
             </div>
             <div className = 'uploadBtn--user'>
@@ -25,25 +26,20 @@ function Header (){
             <div>
                  <img className = 'upload__logo' src={uploadIcon} alt='plus sign' />
                  
-             </div>
+            </div>
+
             <div>
                 <p>UPLOAD</p>
             </div> 
+            
             </div>
 
             <div>
                 <img className='user__img--mohan' src={userImg} alt='user' />
             </div>
         </div>
-            
-
-           
-             
-
-             
-         
-        
-        </section>
+              
+    </section>
         
     );
 }

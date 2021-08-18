@@ -1,54 +1,110 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Fonts/AvenirNextProLT/Alternativefiles/Linotype - Avenir Next LT Pro Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Fonts/AvenirNextProLT/Alternativefiles/Linotype - Avenir Next LT Pro Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Fonts/AvenirNextProLT/Alternativefiles/Linotype - Avenir Next LT Pro Demi.ttf");
+  font-style: bold;
+  font-style: normal;
+}
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Avenir";
 }
 
-.header__section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2rem;
-}
+@media screen and (min-width: 20rem) {
+  .header__section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
 
-.play__logo {
-  display: flex;
-  justify-content: center;
-}
+  .play__logo {
+    display: flex;
+    justify-content: center;
+  }
 
-.search__bar {
-  display: flex;
-  border: 0.25rem solid #e1e1e1;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
+  .search__bar {
+    display: flex;
+    border: 0.25rem solid #e1e1e1;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
 
-.upload__logo {
-  padding-right: 0.5rem;
-}
+  .search__header {
+    font-family: "AvenirNextProLT";
+    padding-left: 0.25rem;
+  }
 
-.uploadBtn {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.5rem solid #0095FF;
-  border-radius: 0.5rem;
-  background-color: #0095FF;
-  color: white;
-  margin-top: 0.5rem;
-}
+  .upload__logo {
+    padding-right: 0.5rem;
+  }
 
-.user__img--mohan {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
+  .uploadBtn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5rem solid #0095FF;
+    border-radius: 0.5rem;
+    background-color: #0095FF;
+    color: white;
+    margin-top: 0.5rem;
+  }
 
-.uploadBtn--user {
-  padding-top: 0.5rem;
-  display: flex;
+  .user__img--mohan {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .uploadBtn--user {
+    padding-top: 0.5rem;
+    display: flex;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .header__section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .search__bar {
+    display: flex;
+    width: 40%;
+    margin-left: 7rem;
+    align-items: center;
+  }
+
+  .uploadBtn {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .header__section {
+    padding-left: 13.5rem;
+    padding-right: 13.5rem;
+  }
+
+  .search__bar {
+    width: 18%;
+    margin-left: 27rem;
+  }
 }/*# sourceMappingURL=App.css.map */
