@@ -78,6 +78,48 @@
      width: 100%;
     
    }
+
+   .video__channel{
+     font-weight: 200;
+     
+   }
+
+   .channel__section{
+     display: flex;
+     justify-content: space-between;
+     padding-bottom: 1rem;
+     border-bottom: 0.20rem solid #e1e1e1;
+     
+   }
+
+   .icon__section{
+     display: flex;
+     font-weight: 200;
+     font-style: normal;
+    //  color: #e1e1e1;
+    //  padding-right: 0.25rem;
+    
+   }
+
+   .video__title{
+     padding-top:2rem;
+     padding-bottom: 1rem;
+
+   }
+
+   .hero__container{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    
+   }
+
+   .bio__page{
+     padding-top:2rem;
+     padding-left: 1rem;
+     padding-right: 2rem;
+     font-weight:200;
+     font-style: normal;
+   }
   
 
 }
