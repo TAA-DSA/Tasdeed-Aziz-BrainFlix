@@ -1,10 +1,16 @@
 import Header from './components/Header';
+import Video from './components/Video';
+import video from './data/videos.json';
+// import Bio from './components/bio';
 import './App.scss';
 
 function App() {
+
   return (
-    // <h1 className="Header">BrainFlix</h1>
+    <>
     <Header />
+    <Video video={video[0]} />
+   </>
     
   );
 }

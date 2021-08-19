@@ -77,6 +77,10 @@
     padding-top: 0.5rem;
     display: flex;
   }
+
+  .video__bmx {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 48rem) {
   .header__section {

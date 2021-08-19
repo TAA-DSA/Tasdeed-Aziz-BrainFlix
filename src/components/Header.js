@@ -3,7 +3,7 @@ import searchIcon from '../assets/Logo/Icon-search.svg';
 import uploadIcon from '../assets/Logo/Icon-upload.svg'; 
 import userImg from '../assets/Images/Mohan-muruge.jpg';
 
-function Header (){
+const Header = ()=>{
     return(
         <section className='header__section'>
          
