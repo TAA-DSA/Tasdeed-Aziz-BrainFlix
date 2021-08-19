@@ -120,6 +120,49 @@
      font-weight:200;
      font-style: normal;
    }
+
+   .comment__section{
+     padding-top: 4rem;
+     padding-left: 1rem;
+     padding-right: 1rem;
+   }
+
+   .comForm__container{
+     padding-top: 4rem;
+     display: flex;
+     border-bottom: 0.25rem solid #e1e1e1;
+   }
+
+   .comment__header{
+     font-size: 1rem;
+     padding-left: 1rem;
+   }
+
+   .form__input{
+     width: 130%;
+     height: 6rem;
+     margin-top: 1rem;
+     margin-left: 1rem;
+     border: 0.25rem solid #e1e1e1;
+     border-radius: 0.25rem;
+
+   }
+
+   .commentBtn{
+     padding-left: 1rem;
+     padding-top: 1.5rem;
+     padding-bottom: 1rem;
+     
+   }
+
+   .comment__submit{
+    width: 140%;
+    border: 0.25rem solid #0095FF;
+    background-color: #0095FF;
+    border-radius: 0.25rem;
+    height: 3rem;
+    color: white;
+   }
   
 
 }
