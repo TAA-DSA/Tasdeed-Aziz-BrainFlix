@@ -16,9 +16,7 @@ export default function Comment(){
                     <button className='comment__submit'>COMMENT</button>
                 </div>
                 </div>
-                
-                
-                
+                      
                 </div>
             </div>
 
