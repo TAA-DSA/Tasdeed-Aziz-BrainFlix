@@ -8,7 +8,7 @@ export default function Comment(){
             <div>
                 <h2>{number} Comments</h2>
                 <div className='comForm__container'>
-                <img className='user__img--mohan' src={userImg} alt='user' />
+                <img className='user__img--muruge' src={userImg} alt='user' />
                 <div>
                 <h2 className='comment__header'>{header}</h2>
                 <textarea className='form__input' placeholder= 'Write a comment here' /> 
@@ -18,8 +18,13 @@ export default function Comment(){
                 </div>
                 
                 
+                
                 </div>
             </div>
+
+            <div className='show__comment'>
+                    <text>Hello Comments Array</text>
+                </div>
         </section>
     )
 }
