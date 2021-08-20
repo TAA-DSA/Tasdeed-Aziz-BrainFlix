@@ -1,7 +1,7 @@
-import logo from '../assets/Logo/Logo-brainflix.svg';
-import searchIcon from '../assets/Logo/Icon-search.svg';
-import uploadIcon from '../assets/Logo/Icon-upload.svg'; 
-import userImg from '../assets/Images/Mohan-muruge.jpg';
+import logo from '../../assets/Logo/Logo-brainflix.svg';
+import searchIcon from '../../assets/Logo/Icon-search.svg';
+import uploadIcon from '../../assets/Logo/Icon-upload.svg'; 
+import userImg from '../../assets/Images/Mohan-muruge.jpg';
 
 const Header = ()=>{
     return(
@@ -14,13 +14,10 @@ const Header = ()=>{
              <div className='search__bar'>
              <div>
                  <img className = "search__logo" src={searchIcon} alt="magnifyingGlass" />
-                 {/* <input className ='search__box' type = 'name' placeholder='search'></input> */}
+                 <input className ='search__box' type = 'name' placeholder= 'Search'></input> 
              </div>
 
-             <div>
-                 <p className='search__header'>Search</p>
              </div>
-            </div>
             <div className = 'uploadBtn--user'>
             <div className='uploadBtn'>
             <div>

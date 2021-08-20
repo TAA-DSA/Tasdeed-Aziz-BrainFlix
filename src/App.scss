@@ -7,7 +7,7 @@
   box-sizing: border-box;
   margin:0;
   padding:0;
-  font-family: 'Avenir';
+  
   
 }
 
@@ -145,7 +145,6 @@
     margin-left: 0.5rem;
     margin-top: 1.7rem;
     
-
    }
 
    .form__input{
@@ -174,8 +173,53 @@
     height: 3rem;
     color: white;
    }
-  
 
+   .search__box{
+     border: 0.25rem solid white;
+     font-size: 1rem;
+     padding-left: 0.5rem;
+     
+   }
+
+   .imgPlaceholder{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.10rem solid #e1e1e1;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #e1e1e1;
+
+   }
+
+   .show__comment{
+     padding-top: 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 0.25rem solid #e1e1e1;
+     padding-right: 2rem;
+   }
+
+   .comment__username{
+     padding-left:1rem;
+     padding-right:1rem;
+   }
+
+   .comment__Paragraph{
+     padding-top:0.5rem;
+     padding-left:1rem;
+   }
+
+   .comment__data{
+     display: flex;
+    
+     
+   }
+
+   .post__date{
+     color:#e1e1e1 ;
+   }
 }
 
 @include tablet{
@@ -196,6 +240,14 @@
 
   .uploadBtn{
     width: 65%;
+  }
+
+  .commentParagraph{
+    margin-top: 1rem;
+  }
+
+  .comment__username{
+    margin-top: 2rem;
   }
 
 }

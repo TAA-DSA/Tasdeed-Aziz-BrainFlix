@@ -1,8 +1,9 @@
-import userImg from '../assets/Images/Mohan-muruge.jpg';
+import userImg from '../../assets/Images/Mohan-muruge.jpg';
 const number = 3
 const header = 'JOIN THE CONVERSATION'
 
-export default function Comment(){
+
+export default function Comment(props){
     return(
         <section className='comment__section'>
             <div>
@@ -16,13 +17,11 @@ export default function Comment(){
                     <button className='comment__submit'>COMMENT</button>
                 </div>
                 </div>
-                      
                 </div>
             </div>
-
-            <div className='show__comment'>
-                    <text>Hello Comments Array</text>
-                </div>
+        
+                 
         </section>
+        
     )
 }
