@@ -4,6 +4,7 @@ import uploadIcon from '../../assets/Logo/Icon-upload.svg';
 import userImg from '../../assets/Images/Mohan-muruge.jpg';
 import './../Header/header.scss'
 
+
 const Header = ()=>{
     return(
         <section className='header__section'>
