@@ -1,0 +1,48 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/partial' as *;
+
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+@include mobile{
+    .imgPlaceholder{
+        width:3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 0.10rem solid #e1e1e1;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        background-color: #e1e1e1;
+    
+       }
+    
+       .post__area{
+         padding-top: 2rem;
+         border-bottom: 0.25rem solid #e1e1e1;
+         margin-left: 1rem;
+         margin-right: 3rem;
+       }
+    
+       .comment__username{
+         padding-left:1rem;
+         padding-right:1rem;
+       }
+    
+       .comment__Paragraph{
+         padding-top:0.5rem;
+         padding-left:1rem;
+       }
+    
+        .comment--mainDiv{
+         display: flex;
+        }
+    
+       .post__date{
+         color:#e1e1e1 ;
+       }
+    
+}

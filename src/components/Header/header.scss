@@ -1,3 +1,112 @@
-h1 {
-  color: plum;
-}/*# sourceMappingURL=header.css.map */
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/partial' as *;
+
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+@include mobile{
+   
+  .header__section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:2rem;
+  }
+  
+  .play__logo{
+     display: flex;
+     justify-content: center;
+  }
+  
+  .search__bar{
+    display:flex;
+    border: 0.25rem solid #e1e1e1;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    
+  }
+
+  .search__box{
+    border: 0.25rem solid white;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    
+  }
+  
+  .search__header{
+    font-family: 'AvenirNextProLT';
+    padding-left: 0.25rem;
+    
+  }
+  
+  .upload__logo{
+    padding-right: 0.5rem;
+  }
+  
+  .uploadBtn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5rem solid #0095FF;
+    border-radius: 0.5rem;
+    background-color: #0095FF;
+    color: white;
+    margin-top: 0.5rem;
+  }
+  
+  .user__img--mohan{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .uploadBtn--user{
+    padding-top: 0.5rem;
+    display: flex;
+   }
+}
+
+@include tablet{
+
+  .header__section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding:2rem;
+  }
+
+  .search__bar{
+    display: flex;
+    width: 40%;
+    margin-left: 7rem;
+    align-items: center;
+  }
+
+  .uploadBtn{
+    width: 65%;
+    margin-left: 1rem;
+  }
+}  
+
+@include desktop{
+
+  .header__section{
+    padding-left:13.5rem;
+    padding-right:13.5rem;
+  }
+
+  .search__bar{
+    width:18%;
+    margin-left: 27rem;
+    
+
+  }
+}

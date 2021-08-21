@@ -1,0 +1,64 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/partial' as *;
+
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+@include mobile{
+
+    .video__thumbnail{
+        width:30%;
+        height: 6rem;
+        border-radius: 0.5rem;
+       }
+   
+       .sidevideo__data{
+         display: flex;
+         margin-top: 1rem;
+         margin-left: 1rem;
+         }
+   
+       .video__details ul{
+         padding-top: 0.28rem;
+         list-style: none;
+       }
+
+       .sidevideo--header{
+         margin-left: 1.4rem;
+         margin-top: 1rem;
+         color: #e1e1e1;
+         font-weight: 700;
+   
+       }
+
+       .video__details{
+           padding-left: 1rem;
+           padding-right: 2rem;
+       }
+
+       .sidevideo--title{
+           font-weight: 600;
+           margin-bottom: 0.5rem;
+       }
+
+      
+
+    
+   
+
+}
+
+@include tablet{
+
+}
+
+@include desktop{
+    .video__thumbnail{
+        width:16%;
+    }
+
+}

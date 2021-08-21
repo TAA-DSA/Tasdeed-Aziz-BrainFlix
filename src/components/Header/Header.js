@@ -2,6 +2,7 @@ import logo from '../../assets/Logo/Logo-brainflix.svg';
 import searchIcon from '../../assets/Logo/Icon-search.svg';
 import uploadIcon from '../../assets/Logo/Icon-upload.svg'; 
 import userImg from '../../assets/Images/Mohan-muruge.jpg';
+import './../Header/header.scss'
 
 const Header = ()=>{
     return(
