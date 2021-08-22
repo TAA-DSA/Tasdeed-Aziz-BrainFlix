@@ -21,6 +21,13 @@ class App extends Component{
     selectedVideo: videoData[0]
   }
    
+  changeVideo = (id) => {
+    const newVideo = this.state.videos.find(clip => clip.id === id)
+
+    this.setState({
+      selectedVideo: newVideo
+    })
+  }
     
   render(){
     console.log(this.state);

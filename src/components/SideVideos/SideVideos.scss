@@ -10,10 +10,15 @@
 
 @include mobile{
 
+    //  .sidevideo__list{
+    //    width:18rem;
+    //  }     
+
     .video__thumbnail{
-        width:30%;
-        height: 6rem;
+        width:19%;
+        height: 4rem;
         border-radius: 0.5rem;
+        object-fit: cover;
        }
    
        .sidevideo__data{
@@ -36,8 +41,9 @@
        }
 
        .video__details{
-           padding-left: 1rem;
-           padding-right: 2rem;
+         width:14.6rem;
+         padding-left: 1rem;
+         padding-right: 2rem;
        }
 
        .sidevideo--title{
@@ -46,19 +52,27 @@
        }
 
       
-
-    
-   
-
-}
+      }
 
 @include tablet{
+
+  .video__thumbnail{
+    width:16%;
+    height: 4rem;
+}
 
 }
 
 @include desktop{
-    .video__thumbnail{
-        width:16%;
-    }
+  
+  // .sidevideo{
+  //   float:right;
+  // }
+  
+
+  .video__thumbnail{
+      width:16%;
+      height: 4rem;
+  }
 
 }

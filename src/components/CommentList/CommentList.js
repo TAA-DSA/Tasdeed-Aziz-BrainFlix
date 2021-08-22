@@ -7,20 +7,24 @@ export default function CommentList(props){
                 {props.comment.comments.map((post)=>{
                     return (
                     <section key={post.id} className='post__area'>
-                    <div className='comment--mainDiv'>    
+                    {/* <div className='comment--mainDiv'>     */}
+                    <div className='comment__data'> 
                     <div>
                         <img className='imgPlaceholder' alt=''/>
                     </div>
-                    <div className='comment__data'>               
-                       <h3 className='comment__username'>{post.name}</h3>
-                       <div>
-                       <p className='post__date'>{post.timestamp}</p>
-                    </div>    
-                    </div>
+                    <div className = 'comment__details'>
+                      <div>             
+                        <h3 className='comment__username'>{post.name}</h3>
+                      </div>
+                      <div>
+                        <p className='post__date'>{post.timestamp}</p>
+                      </div>
+                    </div> 
+                    </div> 
                     <div>
                     <p className='comment__Paragraph'>{post.comment}</p>
                     </div>
-                    </div>
+                    
                     </section>
                     )   
                 
