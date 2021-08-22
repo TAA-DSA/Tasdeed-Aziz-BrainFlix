@@ -23,8 +23,7 @@ class App extends Component{
    
   changeVideo = (id) => {
     const newVideo = this.state.videos.find(thumbnail => thumbnail.id === id)
-    console.log(newVideo)
-
+    
     this.setState({
         selectedVideo: newVideo
     })
