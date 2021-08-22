@@ -10,7 +10,7 @@ export default function Comment(props){
                 <h2>{number} Comments</h2>
                 <div className='comForm__container'>
                 <img className='user__img--muruge' src={userImg} alt='user' />
-                <div>
+                <div className='conForm__details'>
                 <h2 className='comment__header'>{header}</h2>
                 <textarea className='form__input' placeholder= 'Write a comment here' /> 
                 <div className='commentBtn'>

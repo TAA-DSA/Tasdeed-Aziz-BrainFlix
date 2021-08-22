@@ -25,6 +25,7 @@
   .comment__header{
     font-size: 1rem;
     padding-left: 1rem;
+    color: silver;
   }
 
   .user__img--muruge{
@@ -37,13 +38,15 @@
   }
 
   .form__input{
-    width: 130%;
-    height: 6rem;
+    width: 136%;
+    height: 7rem;
     padding: 0.5rem;
     margin-top: 1rem;
     margin-left: 1rem;
+    margin-right:14rem;
     border: 0.25rem solid #e1e1e1;
     border-radius: 0.25rem;
+    font-weight:700;
 
   }
 
@@ -61,5 +64,16 @@
    border-radius: 0.25rem;
    height: 3rem;
    color: white;
+  }
+
+ 
+}
+
+@include tablet{
+  .form__input{
+    width: 136%;
+    height: 7rem;
+   
+  
   }
 }
