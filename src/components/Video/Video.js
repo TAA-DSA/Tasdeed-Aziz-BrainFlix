@@ -9,14 +9,20 @@ export default function Video(props){
       <div className='hero__container'>
          <h1 className='video__title'>{props.video.title}</h1>
       <div className='channel__section'>
+         <div className='channel__detail'>
+         <div>  
          <h2 className='video__channel'>By {props.video.channel}</h2>
+         </div>
+         <div>
          <p className='date'>{props.date(props.video.timestamp)}</p>
-      <div className='icon__section'>
-          <img className= 'views__icon' src={views} alt='eye' />
-          <p className='number__views'>{props.video.views}</p>
-          <img className='icon__like' src={likes} alt='heart' />
-          <p className='likes__given'>{props.video.likes}</p>
-      </div>
+         </div>
+         </div>
+         <div className='icon__section'>
+            <img className= 'views__icon' src={views} alt='eye' />
+            <p className='number__views'>{props.video.views}</p>
+            <img className='icon__like' src={likes} alt='heart' />
+            <p className='likes__given'>{props.video.likes}</p>
+         </div>
       </div>
        
 
