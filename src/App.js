@@ -22,11 +22,14 @@ class App extends Component{
   }
    
   changeVideo = (id) => {
+    //console.log("click is working")
     const newVideo = this.state.videos.find(clip => clip.id === id)
-
-    this.setState({
-      selectedVideo: newVideo
-    })
+    console.log(newVideo)
+    
+    // this.setState({
+    //    selectedVideo: newVideo
+    //  })
+    // console.log(this.state.selectedVideo) 
   }
     
   render(){
@@ -35,10 +38,11 @@ class App extends Component{
       <>
       <Header />
       <Video video={this.state.selectedVideo} />
-      <Bio text={this.state.selectedVideo}/>
+      <Bio text={this.state.selectedVideo}
+          />
       <Comment />
       <Commentlst comment={this.state.selectedVideo} />
-      <SideVideos videoList = {this.state.videos}/>
+      <SideVideos videoList = {this.state.videos} handleClick ={this.changeVideo}/>
      </>
       
     );
