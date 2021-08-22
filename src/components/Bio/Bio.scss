@@ -31,3 +31,17 @@
        }
     
     }
+
+    @include desktop{
+      .hero__container{
+        padding-right: 8rem;
+        padding-left: 15rem;
+        
+       }
+
+       .bio__page{
+        padding-left: 14rem;
+        padding-right: 17rem;
+       
+      }
+    }

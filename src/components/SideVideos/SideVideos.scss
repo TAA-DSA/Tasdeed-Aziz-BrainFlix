@@ -65,9 +65,11 @@
 
 @include desktop{
   
-  // .sidevideo{
-  //   float:right;
-  // }
+  .sidevideo__list{
+    float:right;
+    padding-left: 18rem;
+
+  }
   
 
   .video__thumbnail{

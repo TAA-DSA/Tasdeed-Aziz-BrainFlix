@@ -77,3 +77,16 @@
   
   }
 }
+
+@include desktop{
+  .comment__section{
+    padding-left:15rem;
+    padding-right:10rem;
+  }
+
+  .show__comment{
+    padding-left:14rem;
+    padding-right: 7rem;
+  }
+  
+}
