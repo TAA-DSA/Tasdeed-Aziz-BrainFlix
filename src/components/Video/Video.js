@@ -10,7 +10,7 @@ export default function Video(props){
          <h1 className='video__title'>{props.video.title}</h1>
       <div className='channel__section'>
          <h2 className='video__channel'>By {props.video.channel}</h2>
-         <p className='date'>{props.video.timestamp}</p>
+         <p className='date'>{props.date(props.video.timestamp)}</p>
       <div className='icon__section'>
           <img className= 'views__icon' src={views} alt='eye' />
           <p className='number__views'>{props.video.views}</p>

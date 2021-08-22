@@ -29,17 +29,22 @@ class App extends Component{
     })
     
   }
+
+  changeDate = (timestamp)=> {
+    const date = new Date(timestamp);
+    const dateFormat =((date.getMonth()+1) + "/" + date.getDate() +"/" + date.getFullYear());
+    return dateFormat;
+  }
     
   render(){
     console.log(this.state);
     return (
       <>
       <Header />
-      <Video video={this.state.selectedVideo} />
-      <Bio text={this.state.selectedVideo}
-          />
+      <Video video={this.state.selectedVideo} date={this.changeDate}/>
+      <Bio text={this.state.selectedVideo}  />
       <Comment />
-      <Commentlst comment={this.state.selectedVideo} />
+      <Commentlst comment={this.state.selectedVideo} date={this.changeDate} />
       <SideVideos videoList = {this.state.videos} handleClick ={this.changeVideo}/>
      </>
       
