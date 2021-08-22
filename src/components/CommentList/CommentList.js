@@ -12,7 +12,7 @@ export default function CommentList(props){
           </div>
           <div className = 'comment__details'>
               <div>
-                    <h3 className='comment__username'>{post.name}</h3>
+                  <h3 className='comment__username'>{post.name}</h3>
               </div>
               <div>
                   <p className='post__date'>{props.date(post.timestamp)}</p>
