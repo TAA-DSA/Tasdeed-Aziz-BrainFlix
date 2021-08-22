@@ -9,7 +9,7 @@ export default function SideVideos(props){
                 if(thumbnail.title !== props.videoList[0].title){
                     return (
                         <div key={thumbnail.id} className='sidevideo'
-                        onClick={props.handleClick}>
+                        onClick={() => props.handleClick(thumbnail.id)}>
                         <div className='sidevideo__data'>
                         <img className='video__thumbnail' src={thumbnail.image} alt='side videos'></img>
                         <div className='video__details'>

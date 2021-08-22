@@ -22,14 +22,13 @@ class App extends Component{
   }
    
   changeVideo = (id) => {
-    //console.log("click is working")
-    const newVideo = this.state.videos.find(clip => clip.id === id)
+    const newVideo = this.state.videos.find(thumbnail => thumbnail.id === id)
     console.log(newVideo)
+
+    this.setState({
+        selectedVideo: newVideo
+    })
     
-    // this.setState({
-    //    selectedVideo: newVideo
-    //  })
-    // console.log(this.state.selectedVideo) 
   }
     
   render(){
