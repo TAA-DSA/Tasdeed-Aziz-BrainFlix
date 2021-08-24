@@ -16,7 +16,8 @@
 
   @include desktop {
     padding-right: 8rem;
-    padding-left: 15rem;
+    padding-left: 13rem;
+    margin-right: 23rem;
   }
 }
 
@@ -28,7 +29,7 @@
   font-style: normal;
 
   @include desktop {
-    padding-left: 14rem;
+    padding-left: 13rem;
     padding-right: 17rem;
   }
 }
@@ -36,4 +37,8 @@
 .bio__paragraph {
   padding-right: 1rem;
   font-size: 1rem;
+
+  @include desktop {
+    padding-right: 24rem;
+  }
 }
