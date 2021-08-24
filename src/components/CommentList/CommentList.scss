@@ -26,6 +26,10 @@
   margin-right: 3rem;
   padding-bottom: 1rem;
 
+  @include tablet {
+    margin-right: 7rem;
+  }
+
   @include desktop {
     margin-left: 12rem;
     margin-right: 35rem;
@@ -49,6 +53,10 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0.25rem solid #e1e1e1;
+
+  @include tablet {
+    width: 110%;
+  }
 }
 
 .comment__details {

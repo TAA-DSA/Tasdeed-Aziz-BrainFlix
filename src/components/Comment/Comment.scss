@@ -22,6 +22,7 @@
   }
 
   &__container {
+    width: 100%;
     display: flex;
     padding-top: 2rem;
     border-bottom: 0.25rem solid #e1e1e1;
@@ -54,22 +55,29 @@
   font-weight: 700;
 
   @include tablet {
-    width: 136%;
-    height: 7rem;
+    width: 101%;
+    height: 3rem;
+  }
+
+  @include desktop {
   }
 }
 
-.commentBtn {
+.comment__button {
   padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
 .comment__submit {
-  width: 106%;
+  width: 107%;
   border: 0.25rem solid #0095ff;
   background-color: #0095ff;
   border-radius: 0.25rem;
-  height: 3rem;
+  height: 2rem;
   color: white;
+
+  @include tablet {
+    width: 50%;
+  }
 }

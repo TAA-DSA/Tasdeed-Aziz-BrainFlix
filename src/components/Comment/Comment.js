@@ -7,17 +7,21 @@ export default function Comment(props) {
     <section className="comment">
       <h2>{number} Comments</h2>
       <div className="comment__container">
-        <img className="user__img--muruge" src={userImg} alt="user" />
-        <form className="comment-form">
-          <h2 className="comment__header">{header}</h2>
-          <textarea
-            className="form__input"
-            placeholder="Write a comment here"
-          />
-          <div className="commentBtn">
+        <div>
+          <img className="user__img--muruge" src={userImg} alt="user" />
+        </div>
+        <div>
+          <form className="comment-form">
+            <h2 className="comment__header">{header}</h2>
+            <textarea
+              className="form__input"
+              placeholder="Write a comment here"
+            />
+          </form>
+          <div className="comment__button">
             <input type="submit" className="comment__submit" value="COMMENT" />
           </div>
-        </form>
+        </div>
       </div>
     </section>
   );
