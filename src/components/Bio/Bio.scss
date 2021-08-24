@@ -2,46 +2,38 @@
 @use '../../partials/variables' as *;
 @use '../../partials/partial' as *;
 
-*, ::before, ::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
+.hero__container {
+  padding-right: 1rem;
+  padding-left: 1rem;
 
-@include mobile{
-    .hero__container{
-        padding-right: 1rem;
-        padding-left: 1rem;
-        
-       }
-    
-       .bio__page{
-         padding-top:2rem;
-         padding-left: 1rem;
-         padding-right: 2rem;
-         font-weight:300;
-         font-style: normal;
-       }
+  @include desktop {
+    padding-right: 8rem;
+    padding-left: 15rem;
+  }
+}
 
-       .bio__paragraph{
-         padding-left:1rem;
-         padding-right:2rem;
-         font-size: 1rem;
-       }
-    
-    }
+.bio__page {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-weight: 300;
+  font-style: normal;
 
-    @include desktop{
-      .hero__container{
-        padding-right: 8rem;
-        padding-left: 15rem;
-        
-       }
+  @include desktop {
+    padding-left: 14rem;
+    padding-right: 17rem;
+  }
+}
 
-       .bio__page{
-        padding-left: 14rem;
-        padding-right: 17rem;
-       
-      }
-    }
+.bio__paragraph {
+  padding-right: 1rem;
+  font-size: 1rem;
+}

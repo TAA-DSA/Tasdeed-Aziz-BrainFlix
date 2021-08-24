@@ -2,88 +2,80 @@
 @use '../../partials/variables' as *;
 @use '../../partials/partial' as *;
 
-*, ::before, ::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-@include mobile{
+.video__bmx {
+  width: 100%;
+  background-color: black;
 
-  .video__bmx{
-    width: 100%;
+  @include tablet {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 
-  .video__channel{
-    font-weight: 500;
-  }
-
-  .channel__section{
-    border-bottom: 0.20rem solid #e1e1e1;
-  }
-
-   .channel__detail{
-    display: flex;
-    align-items: center;
-    padding-bottom: 1.5rem;
-  }
-
-  .icon__section{
-    display: flex;
-    padding-bottom: 2rem;
-  }
-  
-    .video__title{
-    font-weight:800;
-    padding-top:2rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .date{
-    font-size: 1.5rem;
-    padding-left: 1rem;
-    color: #AFAFAF;
-  }
-
-  .views__icon{
-    padding-right:1rem;
-  }
-
-  .number__views{
-    padding-right:1rem;
-  }
-
-  .icon__like{
-    padding-right: 1rem;
+  @include desktop {
+    padding-right: 18rem;
+    padding-left: 18rem;
   }
 }
 
-@include tablet{
-  .channel__section{
+.video__channel {
+  font-weight: 500;
+}
+
+.channel__section {
+  border-bottom: 0.2rem solid #e1e1e1;
+
+  @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
-    border-bottom: 0.20rem solid #e1e1e1;
-    
+    border-bottom: 0.2rem solid #e1e1e1;
   }
-
-  .icon__section{
-    padding-right: 4rem;
-  }
-
-  .video__bmx{
-    padding-right:2rem;
-    padding-left:2rem;
-    background-color: black;
-  }
-    
 }
 
-@include desktop{
+.channel__detail {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
 
-  .video__bmx{
-    padding-right:18rem;
-    padding-left:18rem;
+.icon__section {
+  display: flex;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    padding-right: 4rem;
   }
+}
+
+.video__title {
+  font-weight: 800;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.date {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #afafaf;
+}
+
+.views__icon {
+  padding-right: 1rem;
+}
+
+.number__views {
+  padding-right: 1rem;
+}
+
+.icon__like {
+  padding-right: 1rem;
 }
