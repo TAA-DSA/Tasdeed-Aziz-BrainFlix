@@ -1,3 +1,5 @@
+import "../../components/CommentList/CommentList.scss";
+
 export default function CommentList(props) {
   return (
     <section className="show__comment">

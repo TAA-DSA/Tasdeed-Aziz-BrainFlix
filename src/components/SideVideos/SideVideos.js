@@ -1,3 +1,5 @@
+import "../SideVideos/SideVideos.scss";
+
 export default function SideVideos(props) {
   //console.log(props)
   return (

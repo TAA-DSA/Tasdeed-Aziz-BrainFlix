@@ -1,3 +1,5 @@
+import "../../components/Comment/Comment.scss";
+
 import userImg from "../../assets/Images/Mohan-muruge.jpg";
 const number = 3;
 const header = "JOIN THE CONVERSATION";

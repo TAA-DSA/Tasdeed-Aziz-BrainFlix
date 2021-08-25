@@ -1,3 +1,4 @@
+import "../../components/Header/header.scss";
 import logo from "../../assets/Logo/Logo-brainflix.svg";
 import searchIcon from "../../assets/Logo/Icon-search.svg";
 import uploadIcon from "../../assets/Logo/Icon-upload.svg";
