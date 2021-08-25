@@ -1,0 +1,89 @@
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *;
+@use '../partials/partial' as *;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.upload {
+  border-top: 0.25rem solid #e1e1e1;
+  padding-left: 1rem;
+
+  &__header {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  &__subheader {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    color: silver;
+  }
+
+  &__img {
+    width: 95%;
+    border-radius: 0.25rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    font-size: 0.5rem;
+
+    &__title {
+      color: silver;
+    }
+
+    &__description {
+      color: silver;
+    }
+
+    &__titlebox {
+      width: 95%;
+      height: 2rem;
+      border: 0.25rem solid #e1e1e1;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+      font-size: 0.5rem;
+      padding: 0.25rem;
+    }
+
+    &__descriptionbox {
+      width: 95%;
+      height: 4rem;
+      border: 0.25rem solid #e1e1e1;
+      font-size: 0.5rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+      padding-top: 0.25rem;
+      padding-left: 0.25rem;
+    }
+  }
+
+  &__button {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+
+    &__publish {
+      padding: 0.5rem;
+      border: 0.25rem solid #0095ff;
+      border-radius: 0.25rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      background-color: #0095ff;
+    }
+
+    &__cancel {
+      color: #0095ff;
+      border: 0.25rem solid white;
+      background-color: white;
+    }
+  }
+}

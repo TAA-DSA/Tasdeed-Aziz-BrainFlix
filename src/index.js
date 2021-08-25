@@ -11,6 +11,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" exact component={App} />
       <Route path="/upload" component={UploadPage} />
+      {/* <Route path='' /> */}
       {/* <Redirect from ='' */}
     </Switch>
   </BrowserRouter>,
