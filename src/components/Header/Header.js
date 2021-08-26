@@ -4,12 +4,15 @@ import searchIcon from "../../assets/Logo/Icon-search.svg";
 import uploadIcon from "../../assets/Logo/Icon-upload.svg";
 import userImg from "../../assets/Images/Mohan-muruge.jpg";
 import "./../Header/header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <section className="header__section">
       <div className="play__logo">
-        <img className="paybutton" src={logo} alt="play" />
+        <Link to="/">
+          <img className="paybutton" src={logo} alt="play" />
+        </Link>
       </div>
 
       <div className="search__bar">
