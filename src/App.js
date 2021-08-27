@@ -9,10 +9,13 @@ import "./App.scss";
 import axios from "axios";
 
 class App extends Component {
+  //declaring the states
   state = {
     selectedVideo: null,
     videos: [],
   };
+
+  //Function to get the video and comment with id parameter
 
   getVideoDetails = (videoID) => {
     axios
@@ -23,8 +26,13 @@ class App extends Component {
         this.setState({
           selectedVideo: videoDetails.data,
         });
+        console.log("selected", this.state.selectedVideo);
       });
   };
+
+  //Fucntion to get all video data without the comment {sideVideoList}
+  //then pass the id to getVideo function to get the
+  //details and display on main page.
 
   getAllVideos = () => {
     axios.get(`${API_URL}?api_key=${API_KEY}`).then((videoResult) => {
@@ -34,18 +42,31 @@ class App extends Component {
         videos: videoResult.data,
       });
 
-      const firstVideo = videoResult.data[0].id;
+      const firstVideo = this.state.videos[0].id;
       console.log("first video[id]:", firstVideo);
 
-      this.getVideoDetails(firstVideo);
+      const currentvideoId = this.props.match.params.videoId;
+      console.log("current video", currentvideoId);
+
+      //
+      const showVideoId = currentvideoId ? currentvideoId : firstVideo;
+
+      this.getVideoDetails(showVideoId);
     });
   };
 
+  //Component mount function
   componentDidMount() {
+    //this.getVideoDetails(this.state.videos[2].id);
     this.getAllVideos();
   }
 
-  //componentDidUpdate
+  //Component update function
+  componentDidUpdate(previousID) {
+    if (this.props.match.params.videoId !== previousID.match.params.videoId) {
+      this.getVideoDetails(this.props.match.params.videoId);
+    }
+  }
 
   // changeVideo = (id) => {
   //   const newVideo = this.state.videos.find((thumbnail) => thumbnail.id === id);
@@ -85,7 +106,7 @@ class App extends Component {
           <div className="right">
             <SideVideos
               videoList={this.state.videos}
-              handleClick={this.changeVideo}
+              //handleClick={this.changeVideo}
             />
           </div>
         </main>
