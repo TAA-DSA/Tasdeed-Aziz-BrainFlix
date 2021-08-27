@@ -4,12 +4,12 @@ import Bio from "./components/Bio/Bio";
 import SideVideos from "./components/SideVideos/SideVideos";
 import Comment from "./components/Comment/Comment";
 import Commentlst from "./components/CommentList/CommentList";
-import { API_URL, API_KEY } from "./Utils";
+import { API_URL, API_KEY, changeDate } from "./Utils";
 import "./App.scss";
 import axios from "axios";
 
 class App extends Component {
-  //declaring the states
+  //creating the states
   state = {
     selectedVideo: null,
     videos: [],
@@ -21,12 +21,9 @@ class App extends Component {
     axios
       .get(`${API_URL}/${videoID}?api_key=${API_KEY}`)
       .then((videoDetails) => {
-        console.log("singleVideo:", videoDetails.data);
-
         this.setState({
           selectedVideo: videoDetails.data,
         });
-        console.log("selected", this.state.selectedVideo);
       });
   };
 
@@ -36,19 +33,16 @@ class App extends Component {
 
   getAllVideos = () => {
     axios.get(`${API_URL}?api_key=${API_KEY}`).then((videoResult) => {
-      console.log("allVideos:", videoResult.data);
-
       this.setState({
         videos: videoResult.data,
       });
 
       const firstVideo = this.state.videos[0].id;
-      console.log("first video[id]:", firstVideo);
 
       const currentvideoId = this.props.match.params.videoId;
-      console.log("current video", currentvideoId);
 
-      //
+      // Condition to show the video thats been selected on main page
+
       const showVideoId = currentvideoId ? currentvideoId : firstVideo;
 
       this.getVideoDetails(showVideoId);
@@ -57,11 +51,11 @@ class App extends Component {
 
   //Component mount function
   componentDidMount() {
-    //this.getVideoDetails(this.state.videos[2].id);
     this.getAllVideos();
   }
 
   //Component update function
+
   componentDidUpdate(previousID) {
     if (this.props.match.params.videoId !== previousID.match.params.videoId) {
       this.getVideoDetails(this.props.match.params.videoId);
@@ -77,37 +71,22 @@ class App extends Component {
   //   });
   // };
 
-  changeDate = (timestamp) => {
-    const date = new Date(timestamp);
-    const dateFormat =
-      date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-    return dateFormat;
-  };
-
   render() {
-    //const { videos } = this.state;
-    //console.log(videos);
     if (!this.state.selectedVideo) {
       return <p>Please wait a second this page is loading...</p>;
     }
     console.log(this.state.selectedVideos);
     return (
       <>
-        <Video video={this.state.selectedVideo} date={this.changeDate} />
+        <Video video={this.state.selectedVideo} date={changeDate} />
         <main>
           <div className="left">
             <Bio text={this.state.selectedVideo} />
             <Comment />
-            <Commentlst
-              comment={this.state.selectedVideo}
-              date={this.changeDate}
-            />
+            <Commentlst comment={this.state.selectedVideo} date={changeDate} />
           </div>
           <div className="right">
-            <SideVideos
-              videoList={this.state.videos}
-              //handleClick={this.changeVideo}
-            />
+            <SideVideos videoList={this.state.videos} />
           </div>
         </main>
       </>

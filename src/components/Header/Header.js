@@ -32,10 +32,10 @@ const Header = () => {
       <div className="uploadbtn--user">
         <div className="uploadbtn">
           <div>
-            <img className="upload__logo" src={uploadIcon} alt="plus sign" />
-          </div>
-          <div>
-            <p>UPLOAD</p>
+            <Link className="uploadbtn__link" to="/upload">
+              <img className="upload__logo" src={uploadIcon} alt="plus sign" />{" "}
+              UPLOAD
+            </Link>
           </div>
         </div>
 
