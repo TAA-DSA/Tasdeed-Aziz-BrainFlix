@@ -24,6 +24,7 @@ class App extends Component {
         this.setState({
           selectedVideo: videoDetails.data,
         });
+        // console.log("main", this.state.selectedVideo);
       });
   };
 
@@ -37,29 +38,40 @@ class App extends Component {
         videos: videoResult.data,
       });
 
-      const firstVideo = this.state.videos[0].id;
+      console.log("selected videos:", this.state.videos[1].id);
+
+      //default video
+      const firstVideo = this.state.videos[0];
 
       const currentvideoId = this.props.match.params.videoId;
 
       // Condition to show the video thats been selected on main page
-      // and stay on the page until the home button is pressed
+      // and stay on the page
 
-      const showVideoId = currentvideoId ? currentvideoId : firstVideo;
+      const showVideoId = currentvideoId ? currentvideoId : firstVideo.id;
 
       this.getVideoDetails(showVideoId);
     });
   };
 
-  //Component mount function
+  // Component mount function
+
   componentDidMount() {
     this.getAllVideos();
   }
 
-  //Component update function
+  //Component update function to update the page with
+  //current selected video
 
   componentDidUpdate(previousID) {
-    if (this.props.match.params.videoId !== previousID.match.params.videoId) {
-      this.getVideoDetails(this.props.match.params.videoId);
+    const currentVideo = this.props.match.params.videoId;
+    const previousVideo = previousID.match.params.videoId;
+
+    console.log("latest", currentVideo);
+    console.log("history", previousVideo);
+
+    if (currentVideo !== previousVideo) {
+      this.getVideoDetails(currentVideo);
     }
   }
 
@@ -69,6 +81,7 @@ class App extends Component {
     }
 
     //Filter out the selected video from side videolist
+
     const filteredVideo = this.state.selectedVideo
       ? this.state.videos.filter(
           (vid) => vid.id !== this.state.selectedVideo.id
@@ -76,10 +89,10 @@ class App extends Component {
       : this.state.videos;
 
     return (
-      <>
-        <Video video={this.state.selectedVideo} date={changeDate} />
-        <main>
+      <main>
+        <div className="main">
           <div className="left">
+            <Video video={this.state.selectedVideo} date={changeDate} />
             <Bio text={this.state.selectedVideo} />
             <Comment />
             <Commentlst comment={this.state.selectedVideo} date={changeDate} />
@@ -87,8 +100,8 @@ class App extends Component {
           <div className="right">
             <SideVideos videoList={filteredVideo} />
           </div>
-        </main>
-      </>
+        </div>
+      </main>
     );
   }
 }
