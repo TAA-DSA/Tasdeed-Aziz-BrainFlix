@@ -7,20 +7,20 @@ export default function SideVideos({ videoList }) {
     <section className="sidevideo__list">
       <h4 className="sidevideo--header">Next Video</h4>
 
-      {videoList.map((thumbnail) => {
+      {videoList.map((video) => {
         return (
-          <div key={thumbnail.id} className="sidevideo">
-            <Link className="Link" to={`/video/${thumbnail.id}`}>
+          <div key={video.id} className="sidevideo">
+            <Link className="Link" to={`/videos/${video.id}`}>
               <div className="sidevideo__data">
                 <img
                   className="video__thumbnail"
-                  src={thumbnail.image}
+                  src={video.image}
                   alt="side videos"
                 ></img>
                 <div className="video__details">
                   <ul>
-                    <li className="sidevideo--title">{thumbnail.title}</li>
-                    <li className="sidevideo--channel">{thumbnail.channel}</li>
+                    <li className="sidevideo--title">{video.title}</li>
+                    <li className="sidevideo--channel">{video.channel}</li>
                   </ul>
                 </div>
               </div>

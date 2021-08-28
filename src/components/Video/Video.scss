@@ -26,10 +26,12 @@
 }
 
 .video__channel {
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .channel__section {
+  width: 60%;
   border-bottom: 0.2rem solid #e1e1e1;
 
   @include tablet {
@@ -63,7 +65,7 @@
 }
 
 .date {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   padding-left: 1rem;
   color: #afafaf;
 }

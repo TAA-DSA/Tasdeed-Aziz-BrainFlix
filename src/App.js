@@ -42,6 +42,7 @@ class App extends Component {
       const currentvideoId = this.props.match.params.videoId;
 
       // Condition to show the video thats been selected on main page
+      // and stay on the page until the home button is pressed
 
       const showVideoId = currentvideoId ? currentvideoId : firstVideo;
 
@@ -62,20 +63,18 @@ class App extends Component {
     }
   }
 
-  // changeVideo = (id) => {
-  //   const newVideo = this.state.videos.find((thumbnail) => thumbnail.id === id);
-
-  //   this.setState({
-  //     selectedVideo: newVideo,
-  //     videos: videoResult.data.filter((vid) => vid.id !== newVideo.id),
-  //   });
-  // };
-
   render() {
     if (!this.state.selectedVideo) {
-      return <p>Please wait a second this page is loading...</p>;
+      return <p>Please wait, this page is loading...</p>;
     }
-    console.log(this.state.selectedVideos);
+
+    //Filter out the selected video from side videolist
+    const filteredVideo = this.state.selectedVideo
+      ? this.state.videos.filter(
+          (vid) => vid.id !== this.state.selectedVideo.id
+        )
+      : this.state.videos;
+
     return (
       <>
         <Video video={this.state.selectedVideo} date={changeDate} />
@@ -86,7 +85,7 @@ class App extends Component {
             <Commentlst comment={this.state.selectedVideo} date={changeDate} />
           </div>
           <div className="right">
-            <SideVideos videoList={this.state.videos} />
+            <SideVideos videoList={filteredVideo} />
           </div>
         </main>
       </>
