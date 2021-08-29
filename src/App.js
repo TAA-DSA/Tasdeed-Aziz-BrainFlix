@@ -24,7 +24,6 @@ class App extends Component {
         this.setState({
           selectedVideo: videoDetails.data,
         });
-        // console.log("main", this.state.selectedVideo);
       });
   };
 

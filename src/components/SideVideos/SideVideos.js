@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "../SideVideos/SideVideos.scss";
 
 export default function SideVideos({ videoList }) {
-  //console.log(props)
   return (
     <section className="sidevideo__list">
       <h4 className="sidevideo--header">Next Video</h4>
