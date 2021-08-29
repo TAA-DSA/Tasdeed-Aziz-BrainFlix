@@ -12,7 +12,6 @@ ReactDOM.render(
       <Route path="/" exact component={App} />
       <Route path="/upload" component={UploadPage} />
       <Route path="/videos/:videoId" component={App} />
-      <Redirect to="/" component={App} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

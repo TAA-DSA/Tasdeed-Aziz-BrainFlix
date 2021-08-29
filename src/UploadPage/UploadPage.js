@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "../UploadPage/UploadPage.scss";
 import uploadVideo from "../assets/Images/Upload-video-preview.jpg";
+import { Redirect } from "react-router-dom";
 
 class UploadPage extends Component {
   state = {
     title: "",
     description: "",
-    isNotValid: true,
   };
 
   handleChange = (event) => {
@@ -31,6 +31,9 @@ class UploadPage extends Component {
   };
 
   render() {
+    if (!this.isFormValid) {
+      return <Redirect to="/" />;
+    }
     return (
       <main className="upload">
         <h1 className="upload__header">Upload Video</h1>
