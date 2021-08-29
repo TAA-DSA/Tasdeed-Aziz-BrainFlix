@@ -15,15 +15,41 @@
   border-top: 0.25rem solid #e1e1e1;
   padding-left: 1rem;
 
+  &__dataconatainer {
+    @include desktop {
+      display: flex;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.25rem solid #e1e1e1;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+  }
+
   &__header {
     padding-top: 2rem;
     padding-bottom: 3rem;
+
+    @include desktop {
+      font-size: 3rem;
+      border-bottom: 0.25rem solid #e1e1e1;
+      padding-bottom: 2rem;
+    }
   }
 
   &__subheader {
     font-size: 1rem;
     padding-bottom: 0.5rem;
     color: silver;
+
+    @include desktop {
+      padding-top: 2rem;
+      font-size: 1.5rem;
+    }
   }
 
   &__img {
@@ -33,6 +59,11 @@
     @include tablet {
       width: 66%;
     }
+
+    @include desktop {
+      margin-right: 1rem;
+      width: 45%;
+    }
   }
 
   &__form {
@@ -40,6 +71,11 @@
     flex-direction: column;
     padding-top: 2rem;
     font-size: 0.5rem;
+
+    @include desktop {
+      width: 214%;
+      font-size: 1rem;
+    }
 
     &__title {
       color: silver;
@@ -62,6 +98,10 @@
         font-size: 0.8rem;
         height: 3rem;
       }
+
+      @include desktop {
+        font-size: 1.2rem;
+      }
     }
 
     &__descriptionbox {
@@ -78,6 +118,11 @@
         height: 5rem;
         font-size: 0.8rem;
       }
+
+      @include desktop {
+        height: 6rem;
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -92,6 +137,10 @@
       flex-direction: row;
       border-top: 0.25rem solid #e1e1e1;
       gap: 1rem;
+    }
+
+    @include desktop {
+      border-top: none;
     }
 
     &__publish {
