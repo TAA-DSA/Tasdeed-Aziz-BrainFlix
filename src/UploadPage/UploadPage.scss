@@ -15,6 +15,10 @@
   border-top: 0.25rem solid #e1e1e1;
   padding-left: 1rem;
 
+  @include tablet {
+    border-top: none;
+  }
+
   &__dataconatainer {
     @include desktop {
       display: flex;
@@ -33,6 +37,10 @@
   &__header {
     padding-top: 2rem;
     padding-bottom: 3rem;
+
+    @include tablet {
+      border-top: 0.25rem solid #e1e1e1;
+    }
 
     @include desktop {
       font-size: 3rem;
