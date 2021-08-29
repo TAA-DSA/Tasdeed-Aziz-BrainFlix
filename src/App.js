@@ -37,15 +37,15 @@ class App extends Component {
         videos: videoResult.data,
       });
 
-      //default video
-      const firstVideo = this.state.videos[0];
+      //default video id
+      const firstVideo = this.state.videos[0].id;
 
       const currentvideoId = this.props.match.params.videoId;
 
       // Condition to show the video thats been selected on main page
       // and stay on the page
 
-      const showVideoId = currentvideoId ? currentvideoId : firstVideo.id;
+      const showVideoId = currentvideoId ? currentvideoId : firstVideo;
 
       this.getVideoDetails(showVideoId);
     });
