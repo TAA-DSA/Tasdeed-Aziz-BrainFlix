@@ -22,10 +22,14 @@
   }
 
   &__container {
-    width: 58%;
+    width: 100%;
     display: flex;
     padding-top: 2rem;
     border-bottom: 0.25rem solid #e1e1e1;
+
+    @include desktop {
+      width: 103%;
+    }
   }
 
   @include desktop {

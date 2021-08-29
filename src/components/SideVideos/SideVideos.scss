@@ -26,9 +26,9 @@
   }
 
   @include desktop {
-    padding-top: 2rem;
+    margin-bottom: 1rem;
     width: 16%;
-    margin-left: 11rem;
+    margin-left: 2rem;
   }
 }
 
@@ -50,7 +50,8 @@
   font-weight: 700;
 
   @include desktop {
-    margin-left: 12rem;
+    padding-top: 2rem;
+    margin-left: 3rem;
   }
 }
 
@@ -65,9 +66,10 @@
   margin-bottom: 0.5rem;
 }
 
-// .sidevideo__list {
-//   @include desktop {
-//     padding-left: 11rem;
-//     padding-right: 41rem;
-//   }
-// }
+.sidevideo__list {
+  @include desktop {
+    margin-top: 28rem;
+    margin-left: -31rem;
+    border-left: 0.25rem solid #e1e1e1;
+  }
+}

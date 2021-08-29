@@ -21,9 +21,11 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 2rem;
+    align-items: baseline;
   }
 
   @include desktop {
+    align-items: center;
     padding-left: 13.5rem;
     padding-right: 13.5rem;
   }
@@ -101,6 +103,5 @@
 }
 
 .uploadbtn--user {
-  padding-top: 0.5rem;
   display: flex;
 }
