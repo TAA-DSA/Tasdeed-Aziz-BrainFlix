@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <section className="header__section">
       <div className="play__logo">
-        <Link to="/">
+        <Link className="homepage" to="/">
           <img className="paybutton" src={logo} alt="play" />
         </Link>
       </div>

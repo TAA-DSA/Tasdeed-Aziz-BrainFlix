@@ -9,13 +9,13 @@ import "./App.scss";
 import axios from "axios";
 
 class App extends Component {
-  //creating the states
+  //creating the empty states
   state = {
     selectedVideo: null,
     videos: [],
   };
 
-  //Function to get the video and comment with id parameter
+  //Function to get the video and comments with id parameter
 
   getVideoDetails = (videoID) => {
     axios
@@ -28,8 +28,8 @@ class App extends Component {
   };
 
   //Fucntion to get all video data without the comment {sideVideoList}
-  //then pass the id to getVideo function to get the
-  //details and display on main page.
+  //then pass the id to the getVideo function to get the
+  //details and display it on main page when selected.
 
   getAllVideos = () => {
     axios.get(`${API_URL}?api_key=${API_KEY}`).then((videoResult) => {
