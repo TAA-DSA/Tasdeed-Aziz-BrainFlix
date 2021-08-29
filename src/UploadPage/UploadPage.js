@@ -6,39 +6,27 @@ class UploadPage extends Component {
   state = {
     title: "",
     description: "",
+    isNotValid: true,
   };
 
   handleChange = (event) => {
-    let isValid = this.isFormValid();
-
-    console.log(isValid);
-
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  handleChange = (event) => {
-    let isValid = this.isFormValid();
-    console.log(isValid);
-
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
 
   isFormValid = () => {
-    if (this.state.title === " " || this.state.description === " ") {
-      return false;
+    if (!this.state.title || !this.state.description) {
+      return true;
     }
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.isFormValid()) {
+    if (!this.isFormValid()) {
       alert("Upload successfully");
     } else {
-      alert("Please enter a valid title or description");
+      alert("Field cannot be blank, please enter a title and description");
     }
   };
 
