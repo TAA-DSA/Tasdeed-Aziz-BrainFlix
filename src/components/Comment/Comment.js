@@ -12,7 +12,7 @@ export default function Comment(props) {
         <div>
           <img className="user__img--muruge" src={userImg} alt="user" />
         </div>
-        <div>
+        <div className="comment__formcontainer">
           <form className="comment-form">
             <h2 className="comment__header">{header}</h2>
             <textarea

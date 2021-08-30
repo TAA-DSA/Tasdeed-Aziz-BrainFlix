@@ -14,6 +14,10 @@
   padding-top: 4rem;
   margin-left: 1rem;
 
+  @include tablet {
+    margin-right: 3rem;
+  }
+
   &__header {
     font-size: 0.6rem;
     padding-left: 1rem;
@@ -36,6 +40,15 @@
     padding-right: 32rem;
     margin-left: 2rem;
   }
+
+  &__formcontainer {
+    padding-bottom: 1rem;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .user__img--muruge {
@@ -57,15 +70,15 @@
   font-weight: 400;
 
   @include tablet {
+    display: flex;
     width: 101%;
     height: 3rem;
   }
 }
 
 .comment__button {
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-top: 1rem;
-  padding-bottom: 2rem;
 }
 
 .comment__submit {
@@ -77,6 +90,6 @@
   color: white;
 
   @include tablet {
-    width: 50%;
+    width: 100%;
   }
 }
