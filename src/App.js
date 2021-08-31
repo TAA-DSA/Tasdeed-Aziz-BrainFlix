@@ -54,7 +54,6 @@ class App extends Component {
   // Component mount function
 
   componentDidMount() {
-    //this.getVideoDetails("1af0jruup5gu");
     this.getAllVideos();
   }
 
