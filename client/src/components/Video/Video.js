@@ -1,7 +1,6 @@
 import "../../components/Video/Video.scss";
 import likes from "../../assets/Logo/Icon-likes.svg";
 import views from "../../assets/Logo/Icon-views.svg";
-//import { Link } from "react-router-dom";
 
 export default function Video({ video, date }) {
   return (

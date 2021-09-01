@@ -27,6 +27,22 @@ class App extends Component {
       });
   };
 
+  //Function to get all video data without the comment {sideVideoList}
+  //then pass the id to the getVideo function to get the
+  //details and display it on main page when selected.
+
+  // Component mount function
+
+  getVideoDetails = (videoID) => {
+    axios
+      .get(`${API_URL}/${videoID}?api_key=${API_KEY}`)
+      .then((videoDetails) => {
+        this.setState({
+          selectedVideo: videoDetails.data,
+        });
+      });
+  };
+
   //Fucntion to get all video data without the comment {sideVideoList}
   //then pass the id to the getVideo function to get the
   //details and display it on main page when selected.
@@ -55,6 +71,10 @@ class App extends Component {
 
   componentDidMount() {
     this.getAllVideos();
+    //if id not found then run the default id.
+    if (this.props.match.params.videoId === null) {
+      return this.getAllVideos("1af0jruup5gu");
+    }
   }
 
   //Component update function to update the page with
@@ -63,6 +83,9 @@ class App extends Component {
   componentDidUpdate(previousID) {
     const currentVideo = this.props.match.params.videoId;
     const previousVideo = previousID.match.params.videoId;
+
+    //console.log("current", currentVideo);
+    //console.log("previous", previousVideo);
 
     if (currentVideo !== previousVideo) {
       this.getVideoDetails(currentVideo);
