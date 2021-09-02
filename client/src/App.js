@@ -80,9 +80,9 @@ class App extends Component {
   //Component update function to update the page with
   //current selected video
 
-  componentDidUpdate(previousID) {
+  componentDidUpdate(previousProps) {
     const currentVideo = this.props.match.params.videoId;
-    const previousVideo = previousID.match.params.videoId;
+    const previousVideo = previousProps.match.params.videoId;
 
     //console.log("current", currentVideo);
     //console.log("previous", previousVideo);

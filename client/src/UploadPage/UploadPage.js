@@ -24,16 +24,19 @@ class UploadPage extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if (!this.isFormValid()) {
+      // <Redirect to="/" />;
       alert("Upload successfully");
     } else {
       alert("Field cannot be blank, please enter a title and description");
     }
+    console.log(this.state.isNotValid);
   };
 
+  //  if(!this.state.isNotValid){
+  //    return <Redirect to = '/' />
+  //  }
+
   render() {
-    // if (!this.isFormValid) {
-    //   return <Redirect to="/" />;
-    // }
     return (
       <main className="upload">
         <h1 className="upload__header">Upload Video</h1>
