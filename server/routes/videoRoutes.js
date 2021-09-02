@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const { title } = require("process");
 const { v4: uuidv4 } = require("uuid");
 
 const videosFilePath = "./data/videos.json";
@@ -22,6 +23,23 @@ router.get("/", (_req, res) => {
   }
 });
 
+router.post("/", (req, res) => {
+  console.log("Request body object:", req.body);
+
+  const newVideo = {
+    id: uuidv4(),
+    title: req.body.title,
+    channel: req.body.channel,
+    image: req.body.image,
+  };
+
+  const video = getVideos();
+  video.push(newVideo);
+
+  fs.writeFileSync(videosFilePath, JSON.stringify(video));
+
+  return res.status(201).json(newVideo);
+});
 //export the router for use in index.js
 
 module.exports = router;
