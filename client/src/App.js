@@ -37,7 +37,7 @@ class App extends Component {
 
       //default video id
       const firstVideo = this.state.videos[0].id;
-      console.log("firstVideo:", firstVideo);
+      //console.log("firstVideo:", firstVideo);
 
       const currentvideoId = this.props.match.params.videoId;
 
