@@ -15,11 +15,6 @@ app.use("/static-files", express.static("public"));
 //Implementing middleware
 app.use(cors());
 
-// //get the video data
-// app.get("/", (req, res) => {
-//   res.send("Hello world!!");
-// });
-
 app.use((_req, _res, next) => {
   console.log("Incoming Request");
   next();

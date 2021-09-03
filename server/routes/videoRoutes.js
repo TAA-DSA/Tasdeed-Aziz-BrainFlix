@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
     id: uuidv4(),
     title: req.body.title,
     channel: req.body.channel,
-    image: req.body.image,
+    image: "http://localhost:8000/images/Mohan-muruge.jpg",
   };
 
   const video = getVideos();
