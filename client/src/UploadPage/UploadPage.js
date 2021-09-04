@@ -26,26 +26,25 @@ class UploadPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
-      console.log(addVideo);
-      console.log("id", addVideo.data.id);
-      axios
-        .post(`${NEW_URL}/${addVideo.data.id}/comments`, this.state)
-        .then((addVideoComments) => {
-          console.log(addVideoComments);
-          this.setState({
-            title: "",
-            description: "",
-          });
-        });
 
-      if (!this.isFormValid()) {
-        // <Redirect to="/" />;
-        alert("Upload successfully");
-      } else {
-        alert("Field cannot be blank, please enter a title and description");
-      }
-    });
+    if (!this.isFormValid()) {
+      axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
+        console.log(addVideo);
+        console.log("id", addVideo.data.id);
+        axios
+          .post(`${NEW_URL}/${addVideo.data.id}/comments`, this.state)
+          .then((addVideoComments) => {
+            console.log(addVideoComments);
+            this.setState({
+              title: "",
+              description: "",
+            });
+          });
+      });
+      alert("Upload successfully");
+    } else {
+      alert("Field cannot be blank, please enter a title and description");
+    }
   };
 
   render() {
