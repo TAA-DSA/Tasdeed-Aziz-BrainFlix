@@ -52,5 +52,11 @@
     "title": "Train Travel On Track For Safety",
     "channel": "Scotty Cranmer",
     "image": "https://i.imgur.com/i6S8m7I.jpg"
+  },
+  {
+    "id": "0abb4212-2d35-41e4-acbf-4141a877fda7",
+    "title": "Learn with Mohan ",
+    "channel": "DevTube",
+    "image": "http://localhost:8000/images/Mohan-muruge.jpg"
   }
 ]
