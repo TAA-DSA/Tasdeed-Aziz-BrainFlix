@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const videoRoutes = require("./routes/videoRoutes");
-const commentRoutes = require("./routes/commentRoutes");
+const detailsRoute = require("./routes/detailsRoute");
 
 const PORT = 8000;
 
@@ -22,7 +22,7 @@ app.use((_req, _res, next) => {
 
 app.use("/videos", videoRoutes);
 
-app.use("/:id", commentRoutes);
+app.use("/:id", detailsRoute);
 
 // Start the server listening
 app.listen(PORT, () => {

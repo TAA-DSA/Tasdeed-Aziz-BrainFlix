@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-const videosFilePath = "./data/videoComment.json";
+const videosFilePath = "./data/videoDetails.json";
 
 const getVideos = () => {
   const fileContent = fs.readFileSync(videosFilePath);
