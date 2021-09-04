@@ -30,9 +30,9 @@ class UploadPage extends Component {
     axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
       console.log(addVideo);
       this.setState({
-        id: this.state.id,
+        id: addVideo.data.id,
       });
-      console.log("id", this.state.data.id);
+      console.log("id", this.state.id);
     });
     axios
       .post(`${NEW_URL}/${this.state.id}`, this.state)
