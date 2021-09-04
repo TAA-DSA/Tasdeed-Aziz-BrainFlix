@@ -8,7 +8,6 @@ import { NEW_URL } from "../Utils";
 
 class UploadPage extends Component {
   state = {
-    id: "",
     title: "",
     description: "",
   };
@@ -29,27 +28,24 @@ class UploadPage extends Component {
     event.preventDefault();
     axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
       console.log(addVideo);
-      this.setState({
-        id: addVideo.data.id,
-      });
-      console.log("id", this.state.id);
-    });
-    axios
-      .post(`${NEW_URL}/${this.state.id}`, this.state)
-      .then((addVideoComments) => {
-        console.log(addVideoComments);
-        this.setState({
-          title: "",
-          description: "",
+      console.log("id", addVideo.data.id);
+      axios
+        .post(`${NEW_URL}/${addVideo.data.id}/comments`, this.state)
+        .then((addVideoComments) => {
+          console.log(addVideoComments);
+          this.setState({
+            title: "",
+            description: "",
+          });
         });
-      });
 
-    if (!this.isFormValid()) {
-      // <Redirect to="/" />;
-      alert("Upload successfully");
-    } else {
-      alert("Field cannot be blank, please enter a title and description");
-    }
+      if (!this.isFormValid()) {
+        // <Redirect to="/" />;
+        alert("Upload successfully");
+      } else {
+        alert("Field cannot be blank, please enter a title and description");
+      }
+    });
   };
 
   render() {

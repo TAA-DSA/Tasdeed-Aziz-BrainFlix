@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
   const newVideo = {
     id: uuidv4(),
     title: req.body.title,
-    channel: req.body.channel,
+    channel: "DevTube",
     image: "http://localhost:8000/images/Mohan-muruge.jpg",
   };
 
