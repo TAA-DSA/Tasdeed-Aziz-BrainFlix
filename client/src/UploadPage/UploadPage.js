@@ -4,7 +4,6 @@ import uploadVideo from "../assets/Images/Upload-video-preview.jpg";
 import axios from "axios";
 import { NEW_URL } from "../Utils";
 //import { Redirect } from "react-router-dom";
-//import axios from "axios";
 
 class UploadPage extends Component {
   state = {
@@ -32,7 +31,7 @@ class UploadPage extends Component {
         console.log(addVideo);
         console.log("id", addVideo.data.id);
         axios
-          .post(`${NEW_URL}/${addVideo.data.id}/comments`, this.state)
+          .post(`${NEW_URL}/${addVideo.data.id}`, this.state)
           .then((addVideoComments) => {
             console.log(addVideoComments);
             this.setState({

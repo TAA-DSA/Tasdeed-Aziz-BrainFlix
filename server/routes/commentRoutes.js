@@ -25,10 +25,10 @@ router.get("/:id", (_req, res) => {
   }
 });
 
-router.post("/:id/comments", (req, res) => {
+router.post("/:id", (req, res) => {
   console.log("Request body object:", req.body);
 
-  const newComments = {
+  const newVideoDetail = {
     id: req.params.id,
     title: req.body.title,
     channel: "DevTube",
@@ -68,11 +68,11 @@ router.post("/:id/comments", (req, res) => {
   };
 
   const video = getVideos();
-  video.push(newComments);
+  video.push(newVideoDetail);
 
   fs.writeFileSync(videosFilePath, JSON.stringify(video));
 
-  return res.status(201).json(newComments);
+  return res.status(201).json(newVideoDetail);
 });
 
 module.exports = router;
