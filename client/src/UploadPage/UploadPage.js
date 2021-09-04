@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import "../UploadPage/UploadPage.scss";
 import uploadVideo from "../assets/Images/Upload-video-preview.jpg";
+import axios from "axios";
+import { NEW_URL } from "../Utils";
 //import { Redirect } from "react-router-dom";
+//import axios from "axios";
 
 class UploadPage extends Component {
   state = {
+    id: "",
     title: "",
     description: "",
   };
@@ -23,18 +27,30 @@ class UploadPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
+      console.log(addVideo);
+      this.setState({
+        id: this.state.id,
+      });
+      console.log("id", this.state.data.id);
+    });
+    axios
+      .post(`${NEW_URL}/${this.state.id}`, this.state)
+      .then((addVideoComments) => {
+        console.log(addVideoComments);
+        this.setState({
+          title: "",
+          description: "",
+        });
+      });
+
     if (!this.isFormValid()) {
       // <Redirect to="/" />;
       alert("Upload successfully");
     } else {
       alert("Field cannot be blank, please enter a title and description");
     }
-    console.log(this.state.isNotValid);
   };
-
-  //  if(!this.state.isNotValid){
-  //    return <Redirect to = '/' />
-  //  }
 
   render() {
     return (
