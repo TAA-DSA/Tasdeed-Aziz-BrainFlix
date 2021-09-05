@@ -54,10 +54,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getAllVideos();
-    //if id not found then run the default id.
-    // if (!this.props.match.params.videoId) {
-    //   return this.getAllVideos("1af0jruup5gu");
-    // }
   }
 
   //Component update function to update the page with
