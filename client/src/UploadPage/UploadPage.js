@@ -26,12 +26,12 @@ class UploadPage extends Component {
     event.preventDefault();
     if (!this.isFormValid()) {
       axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
-        console.log(addVideo);
-        console.log("id", addVideo.data.id);
+        // console.log(addVideo);
+        // console.log("id", addVideo.data.id);
         axios
           .post(`${NEW_URL}/${addVideo.data.id}`, this.state)
           .then((addVideoComments) => {
-            console.log(addVideoComments);
+            //console.log(addVideoComments);
             this.setState({
               title: "",
               description: "",

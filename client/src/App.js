@@ -37,7 +37,6 @@ class App extends Component {
 
       //default video id
       const firstVideo = this.state.videos[0].id;
-      //console.log("firstVideo:", firstVideo);
 
       const currentvideoId = this.props.match.params.videoId;
 
@@ -62,9 +61,6 @@ class App extends Component {
   componentDidUpdate(previousProps) {
     const currentVideo = this.props.match.params.videoId;
     const previousVideo = previousProps.match.params.videoId;
-
-    //console.log("current", currentVideo);
-    //console.log("previous", previousVideo);
 
     if (currentVideo !== previousVideo) {
       this.getVideoDetails(currentVideo);
