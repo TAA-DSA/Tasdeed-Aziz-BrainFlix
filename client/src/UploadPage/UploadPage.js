@@ -3,7 +3,6 @@ import "../UploadPage/UploadPage.scss";
 import uploadVideo from "../assets/Images/Upload-video-preview.jpg";
 import axios from "axios";
 import { NEW_URL } from "../Utils";
-import { withRouter } from "react-router-dom";
 
 class UploadPage extends Component {
   state = {
@@ -25,7 +24,6 @@ class UploadPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     if (!this.isFormValid()) {
       axios.post(`${NEW_URL}`, this.state).then((addVideo) => {
         console.log(addVideo);
@@ -38,10 +36,10 @@ class UploadPage extends Component {
               title: "",
               description: "",
             });
+            this.props.history.push("/");
           });
       });
       alert("Upload successfully");
-      return this.props.history.push("/");
     } else {
       alert("Field cannot be blank, please enter a title and description");
     }
@@ -107,4 +105,4 @@ class UploadPage extends Component {
   }
 }
 
-export default withRouter(UploadPage);
+export default UploadPage;
