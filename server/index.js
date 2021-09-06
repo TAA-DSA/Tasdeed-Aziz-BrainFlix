@@ -4,7 +4,10 @@ const cors = require("cors");
 const videoRoutes = require("./routes/videoRoutes");
 const detailsRoute = require("./routes/detailsRoute");
 
-const PORT = 8000;
+//Run the port using the env file
+require("dotenv").config();
+
+const PORT = process.env.PORT;
 
 app.use(express.json());
 
