@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const { title } = require("process");
 const { v4: uuidv4 } = require("uuid");
 
 const videosFilePath = "./data/videos.json";
@@ -17,7 +16,7 @@ const getVideos = () => {
 router.get("/", (_req, res) => {
   try {
     const videos = getVideos();
-    return res.status(200).json(videos);
+    return res.status(200).json(videos); //add filter
   } catch (err) {
     return res.status(500).json({ error: "File invalid." });
   }
